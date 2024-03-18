@@ -8,8 +8,13 @@ public class DrawerInteractable : XRGrabInteractable
 {
     [SerializeField] Transform drawerTransform;
     [SerializeField] XRSocketInteractor keySocket;
+    public XRSocketInteractor GetKeySocket => keySocket;
     [SerializeField] bool isLocked;
     [SerializeField] GameObject myLight;
+    [SerializeField] AudioClip drawerMoveClip;
+    public AudioClip GetDrawerMoveClip => drawerMoveClip;
+    [SerializeField] AudioClip socketedClip;
+    public AudioClip GetSocketedClip => socketedClip;
 
     private Transform parentTransform;
     private const string defaultLayer = "Default";
